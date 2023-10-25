@@ -1,0 +1,28 @@
+<!-- character-table.component.html -->
+
+<table class="table table-bordered">
+    <thead class="cabezera">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Species</th>
+            <th>Type</th>
+            <th>Gender</th>
+            <th>Origin</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let character of listCharacters">
+            <td>{{ character.id }}</td>
+            <td>{{ character.name }}</td>
+            <td>{{ character.status }}</td>
+            <td>{{ character.species }}</td>
+            <td>{{ character.type }}</td>
+            <td>{{ character.gender }}</td>
+            <td>{{ character.origin.name }}</td>
+            <td>{{ character.location.name }}</td>
+        </tr>
+    </tbody>
+</table>

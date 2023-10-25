@@ -1,0 +1,24 @@
+<table class="table table-bordered" *ngIf="chucknorris">
+    <thead class="cabezera">
+        <tr>
+            <th>Categoria</th>
+            <th>Creado en</th>
+            <th>Icono</th>
+            <th>id</th>
+            <th>Fecha de subida</th>
+            <th>URL</th>
+            <th>Frase</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{chucknorris.categories}}</td>
+            <td>{{chucknorris.created_at}}</td>
+            <td><img [src]="chucknorris.icon_url" alt="{{ chucknorris.id }}" width="100" height="100"></td>
+            <td>{{chucknorris.id}}</td>
+            <td>{{chucknorris.update_at}}</td>
+            <td>{{ chucknorris.url }}</td>
+            <td>{{chucknorris.value}}</td>
+        </tr>
+    </tbody>
+</table>

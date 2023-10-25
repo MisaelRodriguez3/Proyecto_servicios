@@ -13,9 +13,9 @@ export class profesoresComponent {
 
   constructor(private restService: ServcioRestService, private fb: FormBuilder) {
     this.profesorForm = this.fb.group({
-      nombres: ['', Validators.required],
-      apellidos: ['', Validators.required],
-      correo: ['', Validators.required]
+      Nombre: ['', Validators.required],
+      Apellido: ['', Validators.required],
+      Correo: ['', Validators.required]
     });
   }
 
@@ -41,16 +41,15 @@ export class profesoresComponent {
     }
     this.profesoreseleccionado = profesor;
     this.profesorForm.setValue({
-      nombres: profesor.nombres,
-      apellidos: profesor.apellidos,
-      telefono: profesor.telefono,
-      direccion: profesor.direccion
+      Nombre: profesor.Nombre,
+      Apellido: profesor.Apellido,
+      Correo: profesor.Correo,
     });
   }
 
   public actualizarprofesor() {
     const datosActualizados = this.profesorForm.value;
-    const idprofesor = this.profesoreseleccionado.idprofesores;
+    const idprofesor = this.profesoreseleccionado.idProfesor;
 
     this.restService.patch(`http://localhost:3000/api/v1/profesor/${idprofesor}`, datosActualizados).subscribe(
       (respuesta) => {

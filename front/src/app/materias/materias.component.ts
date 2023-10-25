@@ -13,7 +13,7 @@ export class materiasComponent {
 
   constructor(private restService: ServcioRestService, private fb: FormBuilder) {
     this.materiaForm = this.fb.group({
-      nombres: ['', Validators.required],
+      nombreMateria: ['', Validators.required],
     });
   }
 
@@ -39,16 +39,13 @@ export class materiasComponent {
     }
     this.materiaSeleccionado = materia;
     this.materiaForm.setValue({
-      nombres: materia.nombres,
-      apellidos: materia.apellidos,
-      telefono: materia.telefono,
-      direccion: materia.direccion
+      nombreMateria: materia.nombreMateria,
     });
   }
 
   public actualizarmateria() {
     const datosActualizados = this.materiaForm.value;
-    const idmateria = this.materiaSeleccionado.idmaterias;
+    const idmateria = this.materiaSeleccionado.idMateria;
 
     this.restService.patch(`http://localhost:3000/api/v1/materia/${idmateria}`, datosActualizados).subscribe(
       (respuesta) => {

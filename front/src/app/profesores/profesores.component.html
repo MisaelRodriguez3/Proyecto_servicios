@@ -35,18 +35,18 @@
 <div class="form">
     <form [formGroup]="profesorForm" class="form-container">
         <div class="form-field">
-            <label for="nombres">Nombre:</label>
-            <input type="text" id="nombres" formControlName="nombres" required class="form-input">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" formControlName="Nombre" required class="form-input">
         </div>
 
         <div class="form-field">
-            <label for="apellidos">Apellido:</label>
-            <input type="text" id="apellidos" formControlName="apellidos" required class="form-input">
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" formControlName="Apellido" required class="form-input">
         </div>
 
         <div class="form-field">
             <label for="correo">Correo:</label>
-            <input type="email" id="Correo" formControlName="correo" required class="form-input">
+            <input type="email" id="Correo" formControlName="Correo" required class="form-input">
         </div>
         <button (click)="agregar()" class="form-button" [disabled]="profesorForm.invalid">Crear profesor</button>
     </form>
@@ -55,18 +55,18 @@
 <div clas="form" [hidden]="!formularioVisible">
     <form [formGroup]="profesorForm" class="form-container">
         <div class="form-field">
-            <label for="nombres">Nombre:</label>
-            <input type="text" id="nombres" formControlName="nombres" required class="form-input">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" formControlName="Nombre" required class="form-input">
         </div>
 
         <div class="form-field">
-            <label for="apellidos">Apellido:</label>
-            <input type="text" id="apellidos" formControlName="apellidos" required class="form-input">
+            <label for="Apellido">Apellido:</label>
+            <input type="text" id="Apellido" formControlName="Apellido" required class="form-input">
         </div>
 
         <div class="form-field">
-            <label for="correo">Correo:</label>
-            <input type="email" id="Correo" formControlName="correo" required class="form-input">
+            <label for="Correo">Correo:</label>
+            <input type="email" id="Correo" formControlName="Correo" required class="form-input">
         </div>
         <button (click)="actualizarprofesor()" class="form-button" [disabled]="profesorForm.invalid">Guardar
             Cambios</button>

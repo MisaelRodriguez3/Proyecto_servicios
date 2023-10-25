@@ -31,8 +31,8 @@
 <div class="form">
     <form [formGroup]="materiaForm" class="form-container">
         <div class="form-field">
-            <label for="nombres">Nombre:</label>
-            <input type="text" id="nombres" formControlName="nombres" required class="form-input">
+            <label for="nombreMateria">Nombre:</label>
+            <input type="text" id="nombreMateria" formControlName="nombreMateria" required class="form-input">
         </div>
         <button (click)="agregar()" class="form-button" [disabled]="materiaForm.invalid">Crear Materia</button>
     </form>
@@ -41,8 +41,8 @@
 <div clas="form" [hidden]="!formularioVisible">
     <form [formGroup]="materiaForm" class="form-container">
         <div class="form-field">
-            <label for="nombres">Nombre:</label>
-            <input type="text" id="nombres" formControlName="nombres" required class="form-input">
+            <label for="nombreMateria">Nombre:</label>
+            <input type="text" id="nombreMateria" formControlName="nombreMateria" required class="form-input">
         </div>
         <button (click)="actualizarmateria()" class="form-button" [disabled]="materiaForm.invalid">Guardar
             Cambios</button>

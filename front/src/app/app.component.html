@@ -1,7 +1,47 @@
 <h1>"Maverick Minds"</h1>
-<app-alumnos></app-alumnos>
-<app-materias></app-materias>
-<app-profesores></app-profesores>
-<app-rickandmorty></app-rickandmorty>
-<app-meal></app-meal>
-<app-chucknorris></app-chucknorris>
+
+
+
+
+
+<div id="flex">
+
+    <button (click)="mostrarFormulario0()" class="btn btn-secondary dropdown-toggle espacio">Alumnos</button>
+
+    <button (click)="mostrarFormulario()" class="btn btn-secondary dropdown-toggle espacio">Materias</button>
+
+
+    <button (click)="mostrarFormulario2()" class="btn btn-secondary dropdown-toggle espacio" >Profesores</button>
+
+
+    <button (click)="mostrarFormulario3()" class="btn btn-secondary dropdown-toggle espacio">rick</button>
+
+
+    <button (click)="mostrarFormulario4()" class="btn btn-secondary dropdown-toggle espacio">comida</button>
+
+
+    <button (click)="mostrarFormulario5()" class="btn btn-secondary dropdown-toggle espacio">chuck</button>
+</div>
+
+
+<div class="vmateria" [hidden]="!visibleAlumnos">
+    <app-alumnos></app-alumnos>
+</div>
+
+<div class="vmateria" [hidden]="!visibleMaterias">
+    <app-materias></app-materias>
+</div>
+<div class="vmateria" [hidden]="!visibleProfesor">
+    <app-profesores></app-profesores>
+</div>
+
+<div class="vmateria" [hidden]="!visibleRick">
+    <app-rickandmorty></app-rickandmorty>
+</div>
+
+<div class="vmateria" [hidden]="!visibleComida">
+    <app-meal></app-meal>
+</div>
+<div class="vmateria" [hidden]="!visibleChuk">
+    <app-chucknorris></app-chucknorris>
+</div>
